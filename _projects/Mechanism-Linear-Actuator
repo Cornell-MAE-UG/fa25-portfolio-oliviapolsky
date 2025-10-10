@@ -3,7 +3,7 @@ layout: project
 title: Hoist Mechanism with Linear Actuator
 description: ENGRD 2020 portfolio project — 2D frame design to lift the max load to a target height using a rigid bar, 3 pin supports, and a linear actuator.
 technologies: [Statics, Free-body diagrams,]
-image: /assets/images/function-graph.png
+image: /assets/images/Statics Hw 5.pdf
 ---
 
 For this ENGRD 2020 portfolio project, I designed a compact two-link hoist mechanism inside a 150 cm × 50 cm envelope using one rigid load bar, three pin supports (two ground-mounted), and a linear actuator. The load bar pivots about a ground pin; a short lever driven by the actuator converts the actuator’s axial force into a vertical lift at the hook while keeping the actuator primarily in tension/compression. I laid out the pins and bar to maximize the actuator’s moment arm at the hardest part of the lift, then used free-body diagrams and planar equilibrium (∑Fx=0, ∑Fy=0, ∑M=0) to size the actuator and estimate the maximum lift load. From the sketch coordinates I computed actuator length at start and top positions to get the required stroke, and I swept the motion to find the peak actuator force near the start angle (smallest moment arm). Based on those results, I tentatively selected a Tolomatic IMA33-class actuator with a suitable screw lead and stroke, leaving margin for force and kinematics. The final write-up includes the geometry, stroke calculation, the force-vs-angle check that determines 𝑊max and brief notes on pin reactions, side-load avoidance, and the option of a holding brake for vertical holding.

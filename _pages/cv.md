@@ -13,25 +13,22 @@ permalink: /cv/
 ---
 
 #### Objective
-Aspiring engineering student with a strong foundation in.... Passionate about ... and eager to apply my knowledge in real-world applications.
-
+My name is Olivia Polsky, and I’m a sophomore studying Mechanical Engineering at Cornell University. I’m a member of the Concrete Canoe Mix Subteam, where I help design and formulate the concrete mix for our boat. My academic interests lie in materials science and structural design, as I enjoy exploring how material properties influence the strength and performance of engineered systems. Outside of engineering, I love playing field hockey, guitar, and spending time on creative hobbies like sewing and crocheting.
 ---
 
 #### Education
 - **Cornell University**  
-  *Bachelor of Science in Mechanical and Aerospace Engineering*  
-  GPA: 3.8/4.0 | Graduation: Month, Year
+  *Bachelor of Science in Mechanical Engineering
+  GPA: 3.2/4.0 | Graduation: 05, 2028
 
-- **[High School Name]**  
-  *High School Diploma*  
-  Graduation: [Month, Year]
+- **[Pelham Memorial High School]**  
+  Graduation: [06, 2024]
 
 ---
 
-#### Skills
-- **Software:** Autodesk Fusion 360, SolidWorks, ANSYS  
-- **Programming:** Python, MATLAB  
-- **Tools:** 3D Printing, Laser Cutting  
+#### Skills 
+- **Programming:** Python,  
+- **Tools:** 3D Printing,  
 
 ---
 

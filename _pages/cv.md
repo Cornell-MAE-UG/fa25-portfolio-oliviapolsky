@@ -35,6 +35,8 @@ My name is Olivia Polsky, and I’m a sophomore studying Mechanical Engineering 
 #### Projects
 - **[Concrete Canoe]**:  
   *[I’m a Mix Subteam member on the Concrete Canoe Project Team, where I design and test lightweight, high-strength concrete mixes by tuning water–cement ratio, admixtures, aggregates, and reinforcement additives. I cast specimens, run compressive/flexural tests, and iterate the mix design based on performance data]*  
+   **[Spotted Lanternfly Mitigation System]**:  
+  *[I’m working on a semester-long mechanical design project focused on mitigating spotted lanternfly (SLF) in vineyards without damaging grapevines or disrupting wine production. Our team is prototyping lure-and-removal concepts, including exploring stimulus frequencies SLF may be attracted to, to draw them toward controlled collection points for safe removal while protecting the vine.]*  
   
 
 ---

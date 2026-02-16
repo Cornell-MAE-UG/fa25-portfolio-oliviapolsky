@@ -27,45 +27,17 @@ My name is Olivia Polsky, and I’m a sophomore studying Mechanical Engineering 
 ---
 
 #### Skills 
-- **Programming:** Python,  
-- **Tools:** 3D Printing,  
+- **Programming:** Python,CAD,Matlab,JASP/SPSS  
+- **Tools:** 3D Printing  
 
 ---
 
 #### Projects
-- **[Project Title]**:  
-  *[Short Description]*  
-  - Key Achievement 1  
-  - Key Achievement 2  
-
-- **[Project Title]**:  
-  *[Short Description]*  
-  - Key Achievement 1  
-  - Key Achievement 2  
+- **[Concrete Canoe]**:  
+  *[I’m a Mix Subteam member on the Concrete Canoe Project Team, where I design and test lightweight, high-strength concrete mixes by tuning water–cement ratio, admixtures, aggregates, and reinforcement additives. I cast specimens, run compressive/flexural tests, and iterate the mix design based on performance data]*  
+  
 
 ---
 
-#### Work Experience
-- **[Company Name] - Intern**  
-  [Month, Year] - [Month, Year]  
-  - Responsibility 1  
-  - Responsibility 2  
-
----
-
-#### Achievements & Certifications
-- [Certification Name], [Issuing Organization], [Year]  
-- [Achievement Name], [Competition/Event], [Year]  
-
----
-
-#### Extracurricular Activities
-- Member of [Club/Organization Name]  
-- Volunteer for [Event/Organization Name]  
-
----
-
-#### References
-Available upon request.
 
 ---

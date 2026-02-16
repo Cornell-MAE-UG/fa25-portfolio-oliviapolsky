@@ -3,9 +3,8 @@ layout: project
 title: Mugs 3 Ways
 description: Intro to Mechanical Design Mug Design
 technologies: [CAD]
-
+image: /assets/images/Mug3Ways.jpg
 ---
-[Download my Mugs with Photos]({{ "/assets/Mugs 3 Ways.pdf" | relative_url }}) in PDF format.
 
 For a CAD introduction assignment in Autodesk Fusion 360, I modeled three unique 12-oz coffee mugs while practicing multiple solid-modeling workflows. Each mug was designed to hold 12–14 oz, include a functional handle, and meet geometry constraints (at least one cylindrical mug, at least one non-cylindrical, and one with a bottom surface area ~2× larger than the top). Across the set, I intentionally used different feature strategies, revolve, extrude + shell, and multi-extrusion, and created handles using sweep and/or loft to build clean, manufacturable forms and reinforce a flexible CAD process.
 

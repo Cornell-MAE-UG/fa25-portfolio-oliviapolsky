@@ -8,7 +8,7 @@ permalink: /cv/
 [Download my CV]({{ "/assets/OliviaPolsky_Resume.pdf" | relative_url }}) in PDF format.
 
 
-**Email:** [netID@cornell.edu](mailto:netID@cornell.edu) | | | **Phone:** 914-246-934
+**Email:** [netID@cornell.edu](mailto:netID@cornell.edu) | | | **Phone:** 914-246-9634
 
 ---
 

@@ -8,7 +8,7 @@ permalink: /cv/
 [Download my CV]({{ "/assets/OliviaPolsky_Resume.pdf" | relative_url }}) in PDF format.
 
 
-**Email:** [netID@cornell.edu](mailto:netID@cornell.edu) | | | **Phone:** +123 456 7890
+**Email:** [netID@cornell.edu](mailto:netID@cornell.edu) | | | **Phone:** 914-246-934
 
 ---
 
@@ -19,7 +19,7 @@ My name is Olivia Polsky, and I’m a sophomore studying Mechanical Engineering 
 #### Education
 - **Cornell University**  
   *Bachelor of Science in Mechanical Engineering
-  GPA: 3.2/4.0 | Graduation: 05, 2028
+  GPA: 3.23/4.0 | Graduation: 05, 2028
 
 - **[Pelham Memorial High School]**  
   Graduation: [06, 2024]

@@ -1,0 +1,7 @@
+layout: project
+title: CoffeeGrinder
+description: Intro to Mechanical Design Coffee Grinder
+technologies: [CAD]
+image: /assets/images/Mug3Ways.jpg
+---
+A semester-long CAD project in Autodesk Fusion 360 redesigning a vintage Peugeot coffee grinder using modern, off-the-shelf components. I sourced parts from McMaster-Carr, reverse-engineered specialized components like the conical burr set from GrabCAD, and designed custom fabricated parts within a three-component limit. The final assembly includes a handle, two shafts, miter gears, and conical burrs, fully constrained so that rotating the handle drives the gears and burrs in a coupled motion, allowing ground coffee to fall freely through the burr gap. The design adheres to strict no-weld, no-glue fabrication rules and was verified for zero component penetration and proper constraint throughout.

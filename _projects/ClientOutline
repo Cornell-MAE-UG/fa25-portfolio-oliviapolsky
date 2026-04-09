@@ -1,89 +1,85 @@
----
 layout: project
-title: Client Outline and Pitch
-description:
-technologies: [MATLAB, python]
+title: "No Fly Zone — SLF Trap"
+description: "A spotted lanternfly lure and trap for vineyards, developed for Cornell CALS Extension, E&J Gallo Winery, and National Grape."
+technologies: [3D Printing, Arduino, CAD]
 image:
----
+Team: No Fly Zone
+Client(s): Cornell CALS Extension / E&J Gallo Winery / National Grape
+
+Table of Contents
+
+Milestone 1: Client Pitch
+Milestone 2: Functional Prototype
 
 
-<!--
-#/assets/images/function-graph.png
+Milestone 1: Client Pitch
+Problem Statement
+The spotted lanternfly (Lycorma delicatula, SLF) is an invasive species spreading prolifically throughout North America. SLFs feed on grapevines, depleting nutrients and reducing crop yield, and they remain on vines during harvest, contaminating the grapes. Economic losses to the grape industry in the Finger Lakes AVA alone are estimated to reach $1.5 million in the first year of infestation, with damages projected to double annually. Grapevines under heavy infestation have been shown to use 38% less water due to reduced sap flow, reflecting significant physiological stress. Current management options are difficult to deploy at scale across large vineyards during the growing season.
+Why It Matters
+Reducing SLF population density before harvest would improve both yield and grape quality. It would also reduce SLF repopulation across seasons, protecting the long-term viability of the vineyard. Adult SLFs are the primary threat: they consume the most plant sap and produce honeydew that promotes sooty mold growth, further reducing photosynthetic capacity and affecting grape appearance.
+Proposed Direction: "The Lure"
+A device hung from a trellis uses a dual-attraction system — a wintergreen-oil-soaked sponge surrounding a 60 Hz speaker — to draw SLFs in. Once inside, a motor-driven rotating trap disk guides them down into a removable screw-in capture chamber. The device is powered by an onboard solar cell.
+Minimum viable product: A plastic housing with a wintergreen oil lure and a one-way valve entrance (resembling a heart valve) that allows SLFs to enter but not exit.
+Long-term product: Full dual-lure system with rotating trap disk, quarantine tubes, replaceable capture chamber, and solar power.
+Key Risks
+
+Efficacy: SLF attraction to the lure cannot be easily tested in a classroom setting; field testing will be required.
+Cost: Deploying one device per vine across a large vineyard could be prohibitively expensive.
+Maintenance: Manual servicing of each trap (emptying chamber, replacing components) requires significant labor at scale.
+
+Questions for the Client
+
+What financial investment would be available for full-scale deployment? (Informs how many units are feasible and what per-unit cost target we should design toward.)
+How much labor is realistically available for ongoing maintenance? (Informs how often the capture chamber needs to be serviceable and whether automation of any maintenance step is worth pursuing.)
+
+References:
+
+Source 1 — JIPM: SLF economic impact
+Source 2 — Sci. Dir.: Grapevine sap flow study
+Source 3 — JEE: SLF management
 
 
-Compile to PDF (example):
-  pandoc O3_ClientOutline_example_submission.md -o O3_ClientOutline.pdf
+Milestone 2: Functional Prototype
+No Fly Zone's first functional prototype is a SLF lure and trap that uses wintergreen oil as an attractant and a motor-driven rotating disk mechanism to guide insects into a removable capture chamber. The prototype was 3D printed and assembled with an Arduino-controlled DC motor, slide switch, battery pack, and screw-in storage container.
+Design Overview
+The trap consists of a weather-shielding top cap, an outer housing with SLF entryways, an internal rotating disk (rotor + stator) driven by a DC motor via a drive shaft, quarantine tubes that channel insects away from the motor, and a screw-in capture chamber at the base. A wintergreen-oil-soaked sponge sits in the lower housing to attract insects. An Arduino controls the motor, toggled by a slide switch; an LED indicates that the motor is running.
+Total BOM cost: $58.80
+Key components include: 3D-printed housing, rotor disc, stator disc, rotors, stators, quarantine tubes, and top shade (RPL-fabricated); drive shaft (McMaster #89845K71, $1.15); DC motor (1.5–5V); Arduino processor; NPN transistor; 6V battery pack; breadboard; wintergreen oil ($7.99); sponge ($2.99); slide switch; green LED; and wiring.
+Assembly Instructions
 
+Glue the two top shade pieces together.
+Assemble the circuit according to the wiring diagram (Arduino → NPN transistor → DC motor, powered by 6V battery pack, with slide switch and LED).
+Insert the small stator pieces into the stator disc. Slide the stator and its spacing ring onto the drive shaft.
+Press-fit the drive shaft into the rotor piece.
+Solder the drive shaft to the motor shaft, then seat the motor in its housing.
+Slide the motor + stator + rotor + spacer ring assembly into the main housing. Insert the circuitry, battery pack, wintergreen oil sponge, and large spacer ring into the lower housing beneath the mechanism.
+Fit the storage container lid into the bottom of the housing, aligning the quarantine tubes with the holes.
+Screw the storage container onto the bottom of the housing.
+Set the top shade into position and attach hanging string to the top.
 
-fontsize: 11pt
-geometry: margin=1in
-papersize: letter
-pagestyle: empty
-header-includes:
-  - \pagenumbering{gobble}
--->
+Design Tests
+Test 1 — Degree of rotation (motion & interference)
 
+Testing: Motor was powered on and the rotor was also spun by hand to check for part alignment and interference through a full 360° range of motion.
+Result: No interference; full 360° rotation confirmed. However, the shaft-to-motor connection (taped) displaced component seating, preventing the assembly from sliding down fully.
+Conclusion: Replace tape connection with adhesive glue for the next iteration to ensure proper component seating.
 
+Test 2 — Minimum motor voltage (with rotor attached)
 
+Testing: Rotor attached to motor; voltage swept upward to find minimum for continuous motion and for startup.
+Result: Continuous motion requires 1.74 V; startup requires 2.47 V.
+Conclusion: Current 6V battery setup provides sufficient headroom. Arduino PWM output will be tuned accordingly.
 
-**Team:** No Fly Zone 
-**Client(s):** Cornell CALS Extension / E&J Gallo Winery / National Grape 
+Test 3 — Minimum rotating speed
 
+Testing: Minimum sustained motor speed measured with shaft and rotor attached under battery power.
+Result: Minimum sustained speed is 45 RPM.
+Conclusion: 45 RPM may be too fast to gently guide insects rather than fling them. A stepper motor will be evaluated for the next iteration to allow slow, controlled rotation.
 
-## Problem statement (most important)
-Problem Statment
-The spotted lantern fly (Lycorma delicatula), also known as SLFs, is an invasive species spreading prolifically throughout North America. SLFs feed on grapevines, decimating crop yield, and additionally impacting wine production. They are difficult to manage, and infestations impact both the growing season and harvesting. Economic losses to the grape industry in Finger Lakes AVA alone is estimated to reach $1.5 million in only the first year of infestation, with damages further doubling annually (1). As SLFs feed on grapevines, they draw nutrients from the plant and reduce the quality of grapes. Grapevines with high levels of infestation used 38% less water due to lower sap flow rates, exemplifying only one of the many avenues of ecological crisis (2). The SLFs also remain on grapevines during the harvesting process, contaminating the grapes and further decreasing yields. This product aims to reduce the population density of the SLFs from the vines during the growing period, without causing physical damage to the grapevines.
-
-
-## Impact
-Impact
-If we can reduce the population of SLFs on the grapevines before harvest, not only can we improve the harvest yield but also improve the longevity of the grapevines itself. If we can reduce the number of SLFs in the vineyard, we can reduce their repopulation as well, ensuring more harvests can be processed instead of rejected due to regulations in production and vineyard preference.
-
-
-Adult spotted lanternflies are the biggest threat to grapevines as they ingest the most plant sap, which reduces yield and damages the vines' health. Their feeding also produces sticky honeydew that promotes the growth of sooty mold, which reduces the photosynthetic capacity of the plant leaves and also affects the appearance of the grapevine (3).Targeting the SLFs before harvest also allows us to eliminate many of them before they can damage the vine.
-
-
-
-
-## Proposed direction(s)
-
-
-### Concept A: “The Lure”
-
-
-This is a device which can be hung from a trellis, containing a speaker emitting a 60hz “mating call”, and an area infused with an alluring wintergreen oil tincture. Once attracted, a helical wall will slowly guide SLF down into a replaceable capture chamber.
-Minimum viable product / proof-of-concept:
-A minimum viable product would contain a luring method, and a mechanism to trap attracted SLFs. In use this could consist of a plastic bottle filled with a small amount of wintergreen oil. A rubber valve, resembling that of a human heart valve, would replace the cap and act as a one-direction entrance.
-Potential long term product:
-A more complete product will lure more SLFs, and trap them better. To implement this, a dual-attraction system is used. A wintergreen-oil soaked sponge will encircle a 60hz speaker. These will be stationed at the bottom of the trap, so as to draw the SLFs down. Once inside the lure, a helical arm will rotate pushing the SLFs into the containment chamber. The product should also contain a method to remove the secured SLFs, and replace the containment chamber for further product use. The rotating arm and speaker can be powered by a small onboard solar cell.
-
-
-
-
-## Key risks / unknowns
-Risks
-Maintenance: The lure requires manual maintenance to remove the chamber with bugs, or if a component fails. It could require a lot of effort to service every lure in a large vineyard.
-- Cost: Grapevines are huge and grape farms span acres, so targeting every single grapevine with a prototype may become extremely expensive and also may include a lot of labor to implement on each vine.
-- Efficacy: If SLF is not attracted to our lure, it will be ineffective in reducing the number of SLF remaining on grapevines. This would require testing that is difficult to do in a classroom setting.
-- Maintenance: The lure requires manual maintenance to remove the chamber with bugs, or if a component fails. It could require a lot of effort to service every lure in a large vineyard.
-
-
-## Questions for the client
-Focus on questions they can answer from lived experience.
-1. What financial investment would be available for the full-scale use of this product?
-2. How much labor would be available for maintaining this product?
-
-
-
-References
-
-
-- <Source 1 (https://academic.oup.com/jipm/article/16/1/2/7964417?searchresult=1&login=true#521897831)>
-- <Source 2 (https://www.sciencedirect.com/science/article/pii/S0167880924004390)>
-- <Source 3 (https://academic.oup.com/jipm/article/16/1/2/7964417) >
-- <Source 4 (https://academic.oup.com/jee/article/115/6/2116/6777183) >
-
-
+Success Criteria
+No Fly Zone is designing a SLF lure that attracts insects via wintergreen oil and captures them using a rotating trap disk that guides them into a lower storage chamber, powered continuously by a motor.
+#CriterionMeasurementPriority1Hangable on a grapevine trellis; mass ≤ 1 kgWeigh assembled unit on a scaleMinimize mass2Packed volume ≤ 1 LMeasure outer dimensions, calculate volumeMinimize volume3User can turn on/off with a single mechanism in ≤ 5 secondsTime 5 testers operating the switch without instructionNot a priority to improve beyond threshold4Operates continuously for ≥ 24 hours under solar powerRun unit on solar input, log runtime until failureMaximize runtime
+Exhibit demo: Criterion 3 (the on/off switch) will be demonstrated live. A tester will be handed the assembled trap and asked to turn it on without instruction; success or failure is immediately observable and ties directly to the usability criterion.
 
 
 

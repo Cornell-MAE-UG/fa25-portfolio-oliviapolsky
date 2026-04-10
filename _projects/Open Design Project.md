@@ -11,22 +11,26 @@ Client(s): Cornell CALS Extension / E&J Gallo Winery / National Grape
 [Client Pitch](#client-pitch)
 [Functional Prototype](#functional-prototype)
 
-Milestone 1: Client Pitch
-Problem Statement
+## Client Pitch
+
+### Problem Statement
 The spotted lanternfly (Lycorma delicatula, SLF) is an invasive species spreading prolifically throughout North America. SLFs feed on grapevines, depleting nutrients and reducing crop yield, and they remain on vines during harvest, contaminating the grapes. Economic losses to the grape industry in the Finger Lakes AVA alone are estimated to reach $1.5 million in the first year of infestation, with damages projected to double annually. Grapevines under heavy infestation have been shown to use 38% less water due to reduced sap flow, reflecting significant physiological stress. Current management options are difficult to deploy at scale across large vineyards during the growing season.
-Why It Matters
+
+### Why It Matters
 Reducing SLF population density before harvest would improve both yield and grape quality. It would also reduce SLF repopulation across seasons, protecting the long-term viability of the vineyard. Adult SLFs are the primary threat: they consume the most plant sap and produce honeydew that promotes sooty mold growth, further reducing photosynthetic capacity and affecting grape appearance.
-Proposed Direction: "The Lure"
+
+### Proposed Direction: "The Lure"
 A device hung from a trellis uses a dual-attraction system — a wintergreen-oil-soaked sponge surrounding a 60 Hz speaker — to draw SLFs in. Once inside, a motor-driven rotating trap disk guides them down into a removable screw-in capture chamber. The device is powered by an onboard solar cell.
 Minimum viable product: A plastic housing with a wintergreen oil lure and a one-way valve entrance (resembling a heart valve) that allows SLFs to enter but not exit.
 Long-term product: Full dual-lure system with rotating trap disk, quarantine tubes, replaceable capture chamber, and solar power.
-Key Risks
+
+### Key Risks
 
 Efficacy: SLF attraction to the lure cannot be easily tested in a classroom setting; field testing will be required.
 Cost: Deploying one device per vine across a large vineyard could be prohibitively expensive.
 Maintenance: Manual servicing of each trap (emptying chamber, replacing components) requires significant labor at scale.
 
-Questions for the Client
+### Questions for the Client
 
 What financial investment would be available for full-scale deployment? (Informs how many units are feasible and what per-unit cost target we should design toward.)
 How much labor is realistically available for ongoing maintenance? (Informs how often the capture chamber needs to be serviceable and whether automation of any maintenance step is worth pursuing.)
@@ -38,25 +42,29 @@ Source 2 — Sci. Dir.: Grapevine sap flow study
 Source 3 — JEE: SLF management
 
 
-Milestone 2: Functional Prototype
+## Functional Prototype
+
 No Fly Zone's first functional prototype is a SLF lure and trap that uses wintergreen oil as an attractant and a motor-driven rotating disk mechanism to guide insects into a removable capture chamber. The prototype was 3D printed and assembled with an Arduino-controlled DC motor, slide switch, battery pack, and screw-in storage container.
-Design Overview
+
+### Design Overview
 The trap consists of a weather-shielding top cap, an outer housing with SLF entryways, an internal rotating disk (rotor + stator) driven by a DC motor via a drive shaft, quarantine tubes that channel insects away from the motor, and a screw-in capture chamber at the base. A wintergreen-oil-soaked sponge sits in the lower housing to attract insects. An Arduino controls the motor, toggled by a slide switch; an LED indicates that the motor is running.
+
 Total BOM cost: $58.80
 Key components include: 3D-printed housing, rotor disc, stator disc, rotors, stators, quarantine tubes, and top shade (RPL-fabricated); drive shaft (McMaster #89845K71, $1.15); DC motor (1.5–5V); Arduino processor; NPN transistor; 6V battery pack; breadboard; wintergreen oil ($7.99); sponge ($2.99); slide switch; green LED; and wiring.
-Assembly Instructions
 
-Glue the two top shade pieces together.
-Assemble the circuit according to the wiring diagram (Arduino → NPN transistor → DC motor, powered by 6V battery pack, with slide switch and LED).
-Insert the small stator pieces into the stator disc. Slide the stator and its spacing ring onto the drive shaft.
-Press-fit the drive shaft into the rotor piece.
-Solder the drive shaft to the motor shaft, then seat the motor in its housing.
-Slide the motor + stator + rotor + spacer ring assembly into the main housing. Insert the circuitry, battery pack, wintergreen oil sponge, and large spacer ring into the lower housing beneath the mechanism.
-Fit the storage container lid into the bottom of the housing, aligning the quarantine tubes with the holes.
-Screw the storage container onto the bottom of the housing.
-Set the top shade into position and attach hanging string to the top.
+### Assembly Instructions
 
-Design Tests
+1. Glue the two top shade pieces together.
+2. Assemble the circuit according to the wiring diagram (Arduino → NPN transistor → DC motor, powered by 6V battery pack, with slide switch and LED).
+3. Insert the small stator pieces into the stator disc. Slide the stator and its spacing ring onto the drive shaft.
+4. Press-fit the drive shaft into the rotor piece.
+5. Solder the drive shaft to the motor shaft, then seat the motor in its housing.
+6. Slide the motor + stator + rotor + spacer ring assembly into the main housing. Insert the circuitry, battery pack, wintergreen oil sponge, and large spacer ring into the         lower housing beneath the mechanism.
+7. Fit the storage container lid into the bottom of the housing, aligning the quarantine tubes with the holes.
+8. Screw the storage container onto the bottom of the housing.
+9. Set the top shade into position and attach hanging string to the top.
+
+### Design Tests
 Test 1 — Degree of rotation (motion & interference)
 
 Testing: Motor was powered on and the rotor was also spun by hand to check for part alignment and interference through a full 360° range of motion.
@@ -75,7 +83,7 @@ Testing: Minimum sustained motor speed measured with shaft and rotor attached un
 Result: Minimum sustained speed is 45 RPM.
 Conclusion: 45 RPM may be too fast to gently guide insects rather than fling them. A stepper motor will be evaluated for the next iteration to allow slow, controlled rotation.
 
-Success Criteria
+### Success Criteria
 No Fly Zone is designing a SLF lure that attracts insects via wintergreen oil and captures them using a rotating trap disk that guides them into a lower storage chamber, powered continuously by a motor.
 #CriterionMeasurementPriority1Hangable on a grapevine trellis; mass ≤ 1 kgWeigh assembled unit on a scaleMinimize mass2Packed volume ≤ 1 LMeasure outer dimensions, calculate volumeMinimize volume3User can turn on/off with a single mechanism in ≤ 5 secondsTime 5 testers operating the switch without instructionNot a priority to improve beyond threshold4Operates continuously for ≥ 24 hours under solar powerRun unit on solar input, log runtime until failureMaximize runtime
 Exhibit demo: Criterion 3 (the on/off switch) will be demonstrated live. A tester will be handed the assembled trap and asked to turn it on without instruction; success or failure is immediately observable and ties directly to the usability criterion.

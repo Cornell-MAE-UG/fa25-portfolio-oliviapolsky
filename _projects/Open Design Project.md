@@ -10,6 +10,7 @@ Client(s): Cornell CALS Extension / E&J Gallo Winery / National Grape
 ## Table of Contents
 [Client Pitch](#client-pitch)
 [Functional Prototype](#functional-prototype)
+[Final Report](#final-report)
 
 ## Client Pitch
 
@@ -88,5 +89,39 @@ No Fly Zone is designing a SLF lure that attracts insects via wintergreen oil an
 #CriterionMeasurementPriority1Hangable on a grapevine trellis; mass ≤ 1 kgWeigh assembled unit on a scaleMinimize mass2Packed volume ≤ 1 LMeasure outer dimensions, calculate volumeMinimize volume3User can turn on/off with a single mechanism in ≤ 5 secondsTime 5 testers operating the switch without instructionNot a priority to improve beyond threshold4Operates continuously for ≥ 24 hours under solar powerRun unit on solar input, log runtime until failureMaximize runtime
 Exhibit demo: Criterion 3 (the on/off switch) will be demonstrated live. A tester will be handed the assembled trap and asked to turn it on without instruction; success or failure is immediately observable and ties directly to the usability criterion.
 
+## Final Report
+
+### Context and Problem Statement
+
+The spotted lanternfly (*Lycorma delicatula*, SLF) is an invasive species spreading prolifically throughout North America. SLFs remain on grapevines during the harvesting process, contaminating the grapes and further decreasing yields. There is currently no efficient, non-damaging, low-labor method to remove SLFs from vines. This product aims to reduce SLF population density at the vine level without causing physical damage to grapevines, while minimizing labor requirements.
+
+### Final Prototype
+
+Our team designed a trellis-mounted device that attracts and removes SLFs using a combination of sensory lures and motorized capture. The device operates in two stages: attraction and capture. Wintergreen oil placed at the device opening lures SLFs inside, where the enclosure geometry guides them into a second chamber. A geared DC motor drives a rotating, toothed mechanism that physically directs SLFs into an isolated, removable collection chamber. The system is externally mounted and avoids direct contact with grapevines.
+
+### Testing and Results
+
+Three tests were conducted to validate the design against success criteria:
+
+**Test 1 — Degree of rotation:** Full 360° rotation confirmed with no part interference. The shaft-to-motor tape connection was identified as a source of misalignment and will be replaced with adhesive in future iterations.
+
+**Test 2 — Minimum motor voltage:** Continuous rotation requires 1.74 V; startup requires 2.47 V. Both are within the 6V battery pack's capability.
+
+**Test 3 — Minimum rotating speed:** Minimum sustained speed was 45 RPM, which was deemed too fast and potentially startling to insects. The motor was swapped for one operating at 20 RPM with lower power draw, enabling smoother and more controlled operation.
+
+The 4×AA battery pack, based on current calculations, can sustain operation for approximately six days — well beyond the 24-hour success criterion.
+
+### Conclusion and Recommendations
+
+The prototype met all three success criteria: mass and volume within targets, single-switch operation, and 24+ hour runtime. Key recommendations for scaling:
+
+- **Control panel:** An Arduino-based network panel could monitor battery and functionality across multiple deployed units, reducing servicing labor by targeting only devices that need attention.
+- **Solar power:** Rechargeable batteries powered by solar panels would eliminate the need to manually replace batteries across a large vineyard.
+- **Acoustic lure:** Replacing wintergreen oil with a 60 Hz speaker (a frequency shown to attract SLFs) would eliminate the maintenance cost of re-oiling every few days.
+- **Size reduction:** Redesigning the housing geometry and repositioning the motor could reduce weight, material usage, and production cost, making large-scale deployment more practical.
+
+Field testing with actual SLFs in a controlled environment is the recommended next step to quantify attraction efficacy and strengthen any future client pitch.
+
+**Total BOM Cost: $155.79**
 
 

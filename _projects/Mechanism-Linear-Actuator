@@ -1,6 +1,7 @@
 ---
 layout: project
 title: Hoist Mechanism with Linear Actuator
+published : false
 description: ENGRD 2020 portfolio project — 2D frame design to lift the max load to a target height using a rigid bar, 3 pin supports, and a linear actuator.
 technologies: [Statics, Free-body diagrams,]
 image: /assets/images/Statics Hw 5_page-0001.jpg
